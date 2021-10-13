@@ -10,6 +10,8 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(cookieParser());
 
+app.use(express.static(__dirname + '/public'));
+
 app.use('/', defaultRoutes);
 
 var port = process.env.PORT || 3003;

@@ -72,6 +72,15 @@ app.use((req, res, next) => {
 	next()
 })
 
+const steg = (req, res) => {
+	res.redirect('https://stylesuxx.github.io/steganography/')
+};
+
+app.use('/steg', steg);
+app.use('/steganography', steg);
+app.use('/steganografi', steg);
+
+
 app.use('/', defaultRoutes);
 
 // If default routes fails, we have 404.

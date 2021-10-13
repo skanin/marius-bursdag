@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const path = require('path');
 
 router.get('/', (req, res) => {
 	res.sendFile('views/velkommen.html', {root: __dirname});
@@ -23,6 +24,14 @@ router.get('/batman', (req, res) => {
 
 router.get('/whydidyouscanme', (req, res) => {
     res.sendFile('views/whyscan.html', {root: __dirname});
+})
+
+router.get('/qr', (req, res) => {
+    res.redirect('https://www.youtube.com/watch?v=GM-e46xdcUo');
+})
+
+router.get('/midi', (req, res) => {
+    res.download(path.join(__dirname, '/files/imbroken.txt'), filename='imbroken.txt');
 })
 
 module.exports = router;

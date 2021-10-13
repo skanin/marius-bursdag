@@ -21,4 +21,8 @@ router.get('/batman', (req, res) => {
     res.sendFile('views/batman.html', {root: __dirname})
 })
 
+router.get('/whydidyouscanme', (req, res) => {
+    res.sendFile('views/whyscan.html', {root: __dirname})
+})
+
 module.exports = router;

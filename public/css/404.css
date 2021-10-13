@@ -1,0 +1,43 @@
+body {
+    color: white;
+    background-color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#main {
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+.content {
+    margin-top: 10%;
+    font-size: large;
+}
+
+.pulsateDiv {
+    position: static;
+}
+
+.pulsate {
+    opacity: 0.5;
+    color: red;
+    animation: pulse 1s infinite;
+    margin-bottom: 5%;
+}
+
+@keyframes pulse {
+    0%{
+        opacity: 0.5;
+        font-size: 30px;
+    }
+    50% {
+        opacity: 1;
+        font-size: 60px;
+    }
+    100% {
+        opacity: 0.5;
+        font-size: 30px;
+    }
+  }

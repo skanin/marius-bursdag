@@ -38,4 +38,8 @@ router.get('/hererbatman', (req, res) => {
     res.sendFile('views/hererbatman.html', {root: __dirname});
 })
 
+router.get('/givemefinalfile', (req, res) => {
+    res.download(path.join(__dirname, '/files/batman.pdf'), filename='batman.pdf');
+})
+
 module.exports = router;

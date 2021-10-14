@@ -34,4 +34,8 @@ router.get('/midi', (req, res) => {
     res.download(path.join(__dirname, '/files/imbroken.txt'), filename='imbroken.txt');
 })
 
+router.get('/hererbatman', (req, res) => {
+    res.sendFile('views/hererbatman.html', {root: __dirname});
+})
+
 module.exports = router;

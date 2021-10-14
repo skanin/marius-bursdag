@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Her er batman</title>
+</head>
+<style>
+    body {
+        color: white;
+        background-color: black;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    
+    #main {
+        margin: auto;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+</style>
+<body>
+    <div id='main'>
+        <p>
+            Dette var siste oppgaven til Marius. Det var en fysisk oppgave, hvor han måtte gå fysisk rundt på Gamle Fysikk NTNU, 
+            finne pdfen du nå har fått lastet ned, scanne QR-koden og deretter bli icet.
+        </p>
+        <br />
+        <p>
+            Takk for at du spilte ❤️
+            <br />
+            -Thomas, Sander
+        </p>
+    </div>
+    <script>
+        const downloadFile = (file) => {
+        const element = document.createElement('a');
+        element.setAttribute('href', 'Download Btn');
+        element.setAttribute('download', file);
+
+        element.style.display = 'none';
+
+        document.body.appendChild(element);
+
+        element.click();
+        document.body.removeChild(element);
+        }
+
+        window.onload = () => {
+            downloadFile('/files/batman.pdf');
+        }
+    </script>
+</body>
+</html>
